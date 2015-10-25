@@ -8,5 +8,11 @@
 - name: Deploys configuration
   template:
     src: megaraid.yaml.j2
-    dest: "{{ datadog_base_path }}/conf.d/"
+    dest: "{{ datadog_base_path }}/conf.d/megaraid.yaml"
+  notify: Restart datadog-agent
+
+- name: Deploys sudoers file
+  template:
+    src: megacli_datadog.j2
+    dest: "/etc/sudoers.d/megacli_datadog"
   notify: Restart datadog-agent

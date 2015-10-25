@@ -1,2 +1,5 @@
 datadog_enabled: false
 datadog_base_path: /etc/dd-agent/
+
+datadog_megaraid_adapter_events: 0
+datadog_megaraid_disk_events: 0

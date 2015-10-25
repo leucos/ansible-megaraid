@@ -7,6 +7,8 @@
 
 init_config:
   megacli_path: /usr/sbin/megacli
+  adapter_events: {{ datadog_megaraid_adapter_events }}
+  disk_events: {{ datadog_megaraid_disk_events }}
 
 instances:
   - adapter: ALL
