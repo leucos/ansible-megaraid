@@ -2,7 +2,7 @@
   apt: pkg=python-apt state=present
 
 - name: Adds PPA
-  apt_repository: repo={{ megaraid_ppa_repos }} state=present
+  apt_repository: repo={{ megaraid_ppa_repos }} state=present update_cache=yes
 
 - name: Installs megacli
   apt: pkg=megacli state=present

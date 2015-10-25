@@ -1,14 +1,17 @@
 - name: Do not install by default
   set_fact:
     __megaraid_present: no  
+  tags: megaraid
 
 - name: Check if Megaraid controller is present
   set_fact:
     __megaraid_present: yes
   with_dict: "{{ansible_devices}}"
   when: '"MegaRAID" in item.value.host'
-
+  tags: megaraid
+  
 - debug: var=__megaraid_present
+  tags: megaraid
 
 - include: megaraid.yml tags=megaraid
   when: __megaraid_present
