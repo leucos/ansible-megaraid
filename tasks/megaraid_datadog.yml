@@ -2,7 +2,7 @@
   get_url:
     url: "{{ megaraid_datadog_check_script }}"
     dest: "{{ datadog_base_path }}/checks.d/"
-  mode: 0755
+    mode: 0755
   notify: Restart datadog-agent
 
 - name: Deploys configuration
