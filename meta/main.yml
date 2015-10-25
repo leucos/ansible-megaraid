@@ -1,0 +1,19 @@
+---
+dependencies: []
+
+galaxy_info:
+  author: Michel Blanc
+  company: devops.works
+  description: Ansible LSI Megaraid, Datadog enabled
+  license: MIT
+  min_ansible_version: 1.6
+  datadog_support: true
+  nagios_support: false
+  platforms:
+  - name: Ubuntu
+    versions:
+    - trusty
+  categories:
+  - system
+  - storage
+

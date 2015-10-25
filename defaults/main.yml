@@ -1,0 +1,2 @@
+datadog_enabled: false
+datadog_base_path: /etc/dd-agent/

@@ -1,0 +1,2 @@
+megaraid_ppa_repos: ppa:rsrchboy/megaraid
+megaraid_datadog_check_script: https://raw.githubusercontent.com/leucos/datadog-megaraid/master/megaraid.py

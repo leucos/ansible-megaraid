@@ -1,0 +1,17 @@
+- name: Do not install by default
+  set_fact:
+    __megaraid_present: no  
+
+- name: Check if Megaraid controller is present
+  set_fact:
+    __megaraid_present: yes
+  with_dict: "{{ansible_devices}}"
+  when: '"MegaRAID" in item.value.host'
+
+- debug: var=__megaraid_present
+
+- include: megaraid.yml tags=megaraid
+  when: __megaraid_present
+
+- include: megaraid_datadog.yml tags=megaraid,datadog
+  when: __megaraid_present and datadog_enabled

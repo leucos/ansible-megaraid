@@ -1,0 +1,8 @@
+- name: Adds python apt support
+  apt: pkg=python-apt state=present
+
+- name: Adds PPA
+  apt_repository: repo={{ megaraid_ppa_repos }} state=present
+
+- name: Installs megacli
+  apt: pkg=megacli state=present
